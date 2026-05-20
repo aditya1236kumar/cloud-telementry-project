@@ -9,7 +9,7 @@ A starter full-stack telemetry analytics app built with Next.js, Prisma, and Tai
 - Cloud service URL telemetry analysis
 - Usage charts with line and pie visuals
 - Forecast-style daily/monthly/yearly metrics
-- Data stored in SQLite via Prisma
+- Data stored in MongoDB via Prisma
 
 ## Getting started
 
@@ -18,10 +18,10 @@ A starter full-stack telemetry analytics app built with Next.js, Prisma, and Tai
    ```bash
    npm install
    ```
-3. Generate Prisma client and create the database:
+3. Generate Prisma client and push the schema to MongoDB:
    ```bash
    npx prisma generate
-   npx prisma migrate dev --name init
+   npx prisma db push
    ```
 4. Start the development server:
    ```bash
